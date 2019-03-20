@@ -1,6 +1,7 @@
 print("give me a sequence of DNA:")
 se = input()
 dictionary={}
+#no need of se =se.split('') ??
 for word in se:
        if word in dictionary:
            dictionary[word] += 1
