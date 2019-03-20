@@ -1,24 +1,11 @@
 print("give me a sequence of DNA:")
 se = input()
 dictionary={}
-a = 0
-c = 0
-g = 0
-t = 0
-for symbol in se:
-    if symbol == 'A':
-        a=a+1
-    if symbol == 'C':
-        c=c+1
-    if symbol == 'G':
-        g=g+1
-    if symbol == 'T':
-        t=t+1
-
-dictionary['A'] = str(a)
-dictionary['C'] = str(c)
-dictionary['G'] = str(g)
-dictionary['T'] = str(t)    
+for word in se:
+       if word in dictionary:
+           dictionary[word] += 1
+       else:
+           dictionary[word] = 1
 print(dictionary)
 
 import matplotlib.pyplot as plt
