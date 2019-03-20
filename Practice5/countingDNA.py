@@ -1,6 +1,5 @@
 print("give me a sequence of DNA:")
-se = "ATGCTTCAGAAAGGTCTTACG"
-print(se)
+se = input()
 dictionary={}
 a = 0
 c = 0
