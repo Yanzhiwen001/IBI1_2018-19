@@ -5,11 +5,12 @@ Created on Tue Mar 26 22:29:35 2019
 
 @author: yanzhiwen
 """
+#open file
 input = open(r'address_information.csv','r')
 aString = input.read()
 import re 
 string= re.split(r'[,\n]',aString)
-#print(string)
+#select right address and set up tuples
 new=[]
 final=[]
 for i in range(0,len(string),3):
@@ -32,7 +33,7 @@ n=0
 for items in final:  
     to_addr = items[1]
     from_addr = '3180111430@zju.edu.cn'
-    password = 'PTY92302'
+    password = 'XXXXXXXXX'
     smtp_server = 'smtp.zju.edu.cn'
 
     text=open('body.txt','r')
