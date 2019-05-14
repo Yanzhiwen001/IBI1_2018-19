@@ -1,7 +1,9 @@
+#input DNA
 print("give me a sequence of DNA:")
 se = input()
 dictionary={}
-#no need of se =se.split('') 
+#no need of se =se.split('')
+#count words
 for word in se:
        if word in dictionary:
            dictionary[word] += 1
@@ -9,6 +11,7 @@ for word in se:
            dictionary[word] = 1
 print(dictionary)
 
+# make plot
 import matplotlib.pyplot as plt
 
 labels =dictionary.keys()

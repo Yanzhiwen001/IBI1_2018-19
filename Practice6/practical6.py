@@ -10,6 +10,7 @@ input = open(r'address_information.csv','r')
 aString = input.read()
 import re 
 string= re.split(r'[,\n]',aString)
+
 #select right address and set up tuples
 new=[]
 final=[]
@@ -31,6 +32,7 @@ from email.mime.text import MIMEText
 n=0
 
 for items in final:  
+    #input sender information
     to_addr = items[1]
     from_addr = '3180111430@zju.edu.cn'
     password = 'XXXXXXXXX'

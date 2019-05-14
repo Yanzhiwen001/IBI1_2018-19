@@ -1,0 +1,3 @@
+This tutorial worked longer as I thought.
+One was because the download speed was really low under school network and the other was because I was not familiar with the GitHub. 
+i'm still not very clear in the conception of 'fork' and 'check out master branch'
