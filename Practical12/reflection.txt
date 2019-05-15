@@ -1,0 +1,4 @@
+At first I want to use def to solve the problem, but I quickly realized there was no need to do it (this is only to make the problem more difficult).
+I use list to store 10000 unit to model population in the first task and in the second task I also use another method (by calculate the totally number, 0 present health, 1 present infected...) that is why I have two files for task 2 and both of them could correctly perform.
+task 3 was kind of like the combination of this two ideas. Actually, I think task 3 was the most interest in all of these. However, it was a bit difficult.
+And I learnt a lot in ploting and have a deeper understanding of recursion.

@@ -42,11 +42,15 @@ def alignment(aseq,bseq):
             newalignment.append(humanseq[i])
 
 #print out all the result
-    print(edit_distance)
-    print(score)
+    print('edit_distance:',edit_distance)
+    print('score/len(aseq):',score/len(aseq))
+    identity=(len(aseq)-edit_distance)/len(aseq)
+    print('identity:',identity)
     #print(finalscore/len(aseq))
     print(aseq)
     print("".join(newalignment))
     print(bseq)
 
 alignment(humanseq,mouseseq)
+alignment(humanseq,randomseq)
+alignment(mouseseq,randomseq)

@@ -1,0 +1,12 @@
+The most difficult part of this code is to find a reliable blosum62 sheet and turn it into excel.
+Also define a function is very convenient to compare many times.
+sheet.cell(line, row): this function helped me a lot and made it easy for many work.
+
+a BLOSUM score for mouse human comparison 8963963963963963%
+a BLOSUM score for mouse random seq comparison  5855855855855856%
+a BLOSUM score for human random seq comparison  5405405405405406%
+a % identity  for mouse human comparison  4.9
+a % identity for mouse random seq comparison  -1.1
+a % identity for human random seq comparison  -1.1
+
+

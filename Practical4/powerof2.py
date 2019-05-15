@@ -1,3 +1,4 @@
+#input
 x=2019
 n=-1
 #save the initial value of x

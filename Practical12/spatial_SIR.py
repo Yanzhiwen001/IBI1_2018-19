@@ -45,8 +45,8 @@ while count<=100:
                     # only infect neighbours that are not already infected!
                         if population[xNeighbour,yNeighbour]==0:
                             population[xNeighbour,yNeighbour]=np.random.choice(range(2),1,p=[1-beta,beta])[0]
-        infectedIndex = np.where(population==1)
-        recoveredIndex = np.where(population==2)
+    infectedIndex = np.where(population==1)
+    recoveredIndex = np.where(population==2)
         
 plt.imshow(population,cmap='viridis',interpolation='nearest')
 
