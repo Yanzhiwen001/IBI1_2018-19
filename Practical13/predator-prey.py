@@ -55,7 +55,8 @@ def xml_to_cps():
     cpsFile = open("predator-prey.cps","w")
     cpsTree.writexml(cpsFile)
     cpsFile.close()
-    
+
+#run copasi within python 
 xml_to_cps()
 
     
@@ -77,7 +78,7 @@ for i in string:
         A.append(float(i[1]))
         B.append(float(i[2]))
 
-
+#make plot
 import matplotlib.pyplot as plt
 plt.plot(A, label='predator(b=0.02,d=0.4)')
 plt.plot(B,label='prey(b=0.1,d=0.02')
@@ -87,17 +88,54 @@ plt.title('Time course')
 plt.legend()
 plt.show()
 
+#to show the relationship between A and B
 plt.plot(A,B)
 plt.xlabel('predator population')
 plt.ylabel('prey population')
 plt.title('Limit cycle')
 plt.show()
 
+
+# import files and get content in tag parameter
 import xml.dom.minidom
 DOMTree=xml.dom.minidom.parse("predator-prey.xml")
 collection = DOMTree.documentElement
 terms = collection.getElementsByTagName('parameter')
 print(terms)
+#change all the parameter at one time
 for term in terms:
     discribtion = term.getAttribute('parameter')
-    print(discribtion)
+    #change value of parameter in the string
+    #put the new attribute into tag parameter
+#save this modified file and then rerun the whole code
+
+
+
+import numpy
+#loop for 100times
+n=0
+while n<=100:
+    n=n+1
+    count=0
+    for term in terms:
+        if count==0:
+            discribtion = term.getAttribute('parameter')
+            value=numpy.random.sample()
+            #change value of parameter in the string
+            #put the new attribute into tag parameter
+            count=1
+        if count==1:
+            discribtion = term.getAttribute('parameter')
+            value=numpy.random.sample()
+            count=2
+        if count==2:
+            discribtion = term.getAttribute('parameter')
+            value=numpy.random.sample()
+            count=3
+        if count==3:
+            discribtion = term.getAttribute('parameter')
+            value=numpy.random.sample()
+            count=0
+#save this modified file and then rerun the whole code
+        
+    

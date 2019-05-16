@@ -8,12 +8,11 @@ Created on Wed May  8 15:47:06 2019
 
 import numpy as np
 import matplotlib.pyplot as plt
-
+#set up initial value
 population = np.zeros((100, 100))
 outbreak = np.random.choice(range(100),2) 
 population[outbreak[0],outbreak[1]] = 1
 
-plt . figure ( figsize =(6,4),dpi=150)
 #plt.imshow(population,cmap='viridis',interpolation='nearest')
 
 beta = 0.3
@@ -25,6 +24,19 @@ infectedIndex = np.where(population==1)
 # loop through all infected points
 count = 0
 while count<=100:
+    #print figure after 0,10,50,100times
+    if count==0:
+        plt.figure ( figsize =(6,4),dpi=150)
+        plt.imshow(population,cmap='viridis',interpolation='nearest')
+    if count==10:
+        plt.figure ( figsize =(6,4),dpi=150)
+        plt.imshow(population,cmap='viridis',interpolation='nearest')
+    if count==50:
+        plt.figure ( figsize =(6,4),dpi=150)
+        plt.imshow(population,cmap='viridis',interpolation='nearest')
+    if count==100:
+        plt.figure ( figsize =(6,4),dpi=150)
+        plt.imshow(population,cmap='viridis',interpolation='nearest')
     count += 1
     for i in range(len(infectedIndex[0])):
         # get x, y coordinates for each point
@@ -35,7 +47,7 @@ while count<=100:
             population[x,y]=np.random.choice(range(3),1,p=[0,1-gamma,gamma])[0]
         
         # infect each neighbour with probability beta
-        # infect all 8 neighbours (this is a bit finicky, is there a better way?):
+        # infect all 8 neighbours:
         for xNeighbour in range(x-1,x+2):
              for yNeighbour in range(y-1,y+2):
                 # don't infect yourself! (Is this strictly necessary?)no i think
@@ -47,7 +59,6 @@ while count<=100:
                             population[xNeighbour,yNeighbour]=np.random.choice(range(2),1,p=[1-beta,beta])[0]
     infectedIndex = np.where(population==1)
     recoveredIndex = np.where(population==2)
-        
-plt.imshow(population,cmap='viridis',interpolation='nearest')
+ 
 
                       
